@@ -1,78 +1,188 @@
 .hero {
-    padding: 60px 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  overflow: hidden;
 }
-.terminalBox {
-    border: 2px solid var(--green);
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.1) 0%,
+    rgba(0, 255, 0, 0) 10%
+  );
+  background-size: 100% 8px;
+  z-index: 1;
+  pointer-events: none;
+  animation: scan 8s linear infinite;
 }
+
+@keyframes scan {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+.terminalContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.1), 
+              0 0 60px rgba(0, 255, 255, 0.05);
+  background: rgba(10, 15, 10, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
 .terminalHeader {
-    background-color: rgba(0, 255, 0, 0.2);
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: rgba(0, 20, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
 }
+
 .terminalButtons {
-    display: flex;
-    gap: 6px;
+  display: flex;
+  gap: 0.6rem;
 }
+
 .terminalButtons span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
 }
+
 .close {
-    background-color: #ff5f56;
+  background-color: #ff5f56;
+  box-shadow: 0 0 5px rgba(255, 95, 86, 0.5);
 }
+
 .minimize {
-    background-color: #27c93f;
+  background-color: #ffbd2e;
+  box-shadow: 0 0 5px rgba(255, 189, 46, 0.5);
 }
+
+.maximize {
+  background-color: #27c93f;
+  box-shadow: 0 0 5px rgba(39, 201, 63, 0.5);
+}
+
 .terminalTitle {
-    color: var(--gray);
-    font-size: 14px;
-    margin-left: 10px;
-    flex-grow: 1;
-    text-align: center;
-}
-.terminalContent{
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-.terminalContent h1{
-    font-size: 2.5rem;
-    line-height: 1.2;
-    color: var(--green);
-}
-.terminalContent p {
-    color: var(--gray);
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-.ctaButton{
-    background: transparent;
-  border: 2px solid var(--green);
-  color: var(--green);
+  color: rgba(0, 255, 0, 0.7);
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  flex-grow: 1;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.1rem;
-  padding: 12px 25px;
+  letter-spacing: 0.5px;
+}
+
+.terminalContent {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.promptLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.promptSymbol {
+  color: #00FF00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.promptText {
+  color: rgba(0, 255, 0, 0.8);
+  font-size: 1.3rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.headline {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.highlight {
+  color: #00FF00;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.3), transparent);
+  z-index: -1;
+}
+
+.subtitle {
+  color: #AAAAAA;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #00a800, #00FF00);
+  border: none;
+  border-radius: 50px;
+  color: #000;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
   cursor: pointer;
-  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
 }
+
 .ctaButton:hover {
-  background-color: var(--green);
-  color: var(--black);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
 }
+
 .ctaButton::before {
   content: "";
   position: absolute;
@@ -80,38 +190,280 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: 0.5s;
+  z-index: -1;
 }
+
 .ctaButton:hover::before {
   left: 100%;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 40px 15px;
+.buttonText {
+  letter-spacing: 1px;
+}
+
+.buttonIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+.secondaryButton {
+  background: transparent;
+  border: 2px solid #00FFFF;
+  border-radius: 50px;
+  color: #00FFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dividerLine {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.3), transparent);
+}
+
+.dividerText {
+  color: #AAAAAA;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.terminalFooter {
+  padding: 1rem;
+  background: rgba(0, 10, 0, 0.4);
+  border-top: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.statusBar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.statusItem {
+  color: #00FF00;
+  font-size: 0.9rem;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusItem::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #00FF00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.scrollingText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: rgba(0, 15, 0, 0.6);
+  border-top: 1px solid rgba(0, 255, 0, 0.2);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.scrollTrack {
+  display: flex;
+  width: 200%;
+  animation: scroll 30s linear infinite;
+}
+
+.scrollTrack span {
+  color: rgba(0, 255, 0, 0.5);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  width: 50%;
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .headline {
+    font-size: 3rem;
   }
   
-  .terminalContent h1 {
-    font-size: 1.8rem;
-  }
-  
-  .terminalContent p {
-    font-size: 1rem;
+  .subtitle {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .terminalContent h1 {
-    font-size: 1.5rem;
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    min-height: 90vh;
   }
   
-  .terminalContent p {
+  .terminalContainer {
+    margin-bottom: 0;
+  }
+  
+  .terminalContent {
+    padding: 2rem 1.5rem;
+  }
+  
+  .headline {
+    font-size: 2.5rem;
+  }
+  
+  .promptText {
+    font-size: 1.1rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+  
+  .secondaryButton {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.8rem;
+  }
+  
+  .terminalFooter {
+    padding: 0.8rem;
+  }
+  
+  .statusBar {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .statusItem {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .statusItem::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .scrollingText {
+    position: relative;
+    bottom: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 255, 0, 0.2);
+    background: rgba(0, 15, 0, 0.6);
+    animation: none;
+  }
+  
+  .scrollTrack {
+    width: 100%;
+    animation: none;
+    justify-content: center;
+  }
+  
+  .scrollTrack span {
+    animation: none;
+    white-space: normal;
+    text-align: center;
     font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  .headline {
+    font-size: 2rem;
+  }
+  
+  .promptLine {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .statusBar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .statusItem {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .scrollingText {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .headline {
+    font-size: 1.8rem;
   }
   
   .ctaButton {
     width: 100%;
-    text-align: center;
+    justify-content: center;
+  }
+  
+  .secondaryButton {
+    width: 100%;
+  }
+  
+  .statusItem {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes mobileScroll {
+  0% { opacity: 0.5; transform: translateY(10px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0.5; transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .scrollTrack span {
+    animation: mobileScroll 8s ease-in-out infinite;
   }
 }

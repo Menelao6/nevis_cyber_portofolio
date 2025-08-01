@@ -1,107 +1,213 @@
-.writeups{
-    padding: 80px 0;
-}
-.sectionTitle{
-    color: var(--green);
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-}
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+.writeups {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.card{
-    border: 1px solid var(--green);
-    background-color: #161B22;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
 }
+
+.terminalPrompt {
+  font-size: 1.1rem;
+  color: #00FF00;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  color: #AAAAAA;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.1);
-  border-color: rgba(0, 255, 0, 0.8);
+  border-color: #00FF00;
 }
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 0, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
 .cardHeader {
-    padding: 20px;
-    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
-.cardHeader h3{
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+
+.cardIcon {
+  font-size: 1.8rem;
+  color: #00FF00;
 }
-.cardBody{
-    padding: 20px;
-    flex-grow: 1;
+
+.cardTitle {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin: 0;
 }
-.cardBody p{
-    color: var(--gray);
-    font-size: 0.95rem;
-    line-height: 1.6;
+
+.cardBody {
+  margin-bottom: 1.5rem;
 }
+
+.cardBody p {
+  color: #AAAAAA;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .cardFooter {
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  gap: 1rem;
 }
-.date, .category {
-  color: var(--gray);
-  font-size: 0.85rem;
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.date {
+  color: #AAAAAA;
+}
+
+.category {
+  color: #00FFFF;
+  background: rgba(0, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
 }
 
 .readMore {
   background: transparent;
   border: none;
-  color: var(--cyan);
+  color: #00FFFF;
   font-family: 'IBM Plex Mono', monospace;
   cursor: pointer;
-  padding: 5px;
-  font-size: 1.2rem;
+  padding: 0.3rem 0.5rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .readMore:hover {
-  color: var(--green);
+  color: #00FF00;
 }
+
+.readMore::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00FF00;
+  transition: width 0.3s ease;
+}
+
+.readMore:hover::after {
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .writeups {
-    padding: 60px 0;
-  }
-  .sectionTitle{
-    display: inline-block;
+    padding: 4rem 0;
   }
   
   .cards {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .cards {
-    grid-template-columns: 1fr;
+  .writeups {
+    padding: 3rem 1rem;
   }
   
-  .cardHeader h3 {
-    font-size: 1.1rem;
-  }
-   .sectionTitle{
-    display: inline-block;
+  .terminalPrompt {
+    font-size: 0.95rem;
+    text-align: left;
+    padding-left: 1rem;
   }
   
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
   
   .cardFooter {
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: 1rem;
   }
 }

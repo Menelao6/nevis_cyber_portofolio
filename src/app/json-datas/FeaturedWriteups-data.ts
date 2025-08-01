@@ -4,6 +4,7 @@ export interface Writeup {
       date: string
       category: string
       description: string
+      icon: string;
 }
 
 export const writeups: Writeup[] = [
@@ -13,6 +14,7 @@ export const writeups: Writeup[] = [
     date: '2023-09-15',
     category: 'Web Security',
     description: 'Deep dive into XSS vulnerabilities and prevention techniques.',
+    icon: '🌐'
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const writeups: Writeup[] = [
     date: '2023-09-10',
     category: 'Network Security',
     description: 'Effective methods for network scanning and reconnaissance.',
+    icon: '📡'
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ export const writeups: Writeup[] = [
     date: '2023-09-05',
     category: 'Red Teaming',
     description: 'Fundamentals of ethical hacking and penetration testing.',
+    icon: '🔓'
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ export const writeups: Writeup[] = [
     date: '2023-09-10',
     category: 'Network Security',
     description: 'Effective methods for network scanning and reconnaissance.',
+    icon: '📡'
   },
   {
     id: 5,
@@ -41,6 +46,7 @@ export const writeups: Writeup[] = [
     date: '2023-09-05',
     category: 'Red Teaming',
     description: 'Fundamentals of ethical hacking and penetration testing.',
+    icon: '🔓'
   },
   
 ]
