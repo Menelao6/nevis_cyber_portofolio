@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className={styles.headline}>
-            Securing the <span className={styles.highlight}>Digital Frontier</span>
+            Securing the <span className={styles.highlight}>Digital Spaces</span>
           </h1>
           
           <p className={styles.subtitle}>

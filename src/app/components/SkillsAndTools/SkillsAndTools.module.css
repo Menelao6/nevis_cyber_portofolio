@@ -1,0 +1,239 @@
+.skills {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.terminalPrompt {
+  font-size: 1.1rem;
+  color: #00FF00;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  color: #AAAAAA;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.capabilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.capabilityCard {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.capabilityCard:hover {
+  transform: translateY(-5px);
+  border-color: #00FFFF;
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.capabilityCard:hover .cardGlow {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+  font-size: 2.2rem;
+  color: #00FF00;
+}
+
+.cardTitle {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skillItem {
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed rgba(0, 255, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillItem:last-child {
+  border-bottom: none;
+}
+
+.skillName {
+  color: #FFBF00;
+  font-size: 1.05rem;
+}
+
+.toolsSection {
+  background: rgba(10, 15, 10, 0.6);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.toolsHeader {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toolsPrompt {
+  color: #00FF00;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1rem;
+}
+
+.toolsTitle {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.toolCard {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.toolCard:hover {
+  background: rgba(0, 20, 0, 0.4);
+  border-color: #00FF00;
+  transform: translateY(-3px);
+}
+
+.toolName {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.toolCategory {
+  color: #AAAAAA;
+  font-size: 0.9rem;
+}
+
+.toolCursor {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1rem;
+  color: #00FF00;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .capabilitiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 0;
+  }
+  
+  .capabilitiesGrid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .toolsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .capabilityCard {
+    padding: 1.5rem;
+  }
+  
+  .toolsSection {
+    padding: 1.5rem;
+  }
+  
+  .toolsTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

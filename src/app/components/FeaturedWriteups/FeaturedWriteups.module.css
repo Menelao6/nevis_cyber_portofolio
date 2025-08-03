@@ -133,6 +133,7 @@
   padding: 0.3rem 0.5rem;
   transition: color 0.3s ease;
   position: relative;
+  font-size: 1.25rem;
 }
 
 .readMore:hover {
