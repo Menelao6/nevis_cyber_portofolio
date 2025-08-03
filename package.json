@@ -1,25 +1,41 @@
 {
-  "name": "nevis_cyber_portofolio",
-  "version": "0.1.0",
+  "name": "cybersecurity-terminal",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.5"
+    "@portabletext/react": "^2.0.0",
+    "@sanity/client": "^5.0.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^4.2.0",
+    "framer-motion": "^10.17.0",
+    "groq": "^2.0.0",
+    "next": "^14.2.29",
+    "next-sanity": "^10.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^5.8.0",
+    "sanity": "^4.2.0",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.5",
-    "@eslint/eslintrc": "^3"
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.2"
+  },
+  "overrides": {
+    "core-js": "^3.30.2",
+    "highlight.js": "^11.8.0",
+    "prismjs": "^1.30.0"
   }
 }

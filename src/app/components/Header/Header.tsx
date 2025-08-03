@@ -1,14 +1,23 @@
-"use client"
+'use client';
 
-import { useState, useEffect } from "react";
-import styles from '../Header/Header.module.css'
+import { useState, useEffect } from 'react';
+import styles from './Header.module.css';
+import Link from 'next/link';
+import { useTheme } from '../ThemeProvider/ThemeProvider';
 
-const Header: React.FC = () => {
+export default function Header() {
   const [activePage, setActivePage] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme } = useTheme();
   
-  const navItems = ['Home', 'Write-ups', 'Certifications', 'Blog', 'Contact'];
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Write-ups', path: '/writeups' },
+    { name: 'Certifications', path: '#certifications' },
+    { name: 'Blog', path: '#blog' },
+    { name: 'Contact', path: '#contact' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +29,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${theme === 'dark' ? styles.dark : ''}`}>
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
           <span className={styles.prompt}>&gt;</span>
@@ -31,14 +40,15 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
           {navItems.map((item) => (
-            <button
-              key={item}
-              className={`${styles.navItem} ${activePage === item ? styles.active : ''}`}
-              onClick={() => setActivePage(item)}
+            <Link
+              key={item.name}
+              href={item.path}
+              className={`${styles.navItem} ${activePage === item.name ? styles.active : ''}`}
+              onClick={() => setActivePage(item.name)}
             >
-              {item}
-              {activePage === item && <span className="blinking-cursor"></span>}
-            </button>
+              {item.name}
+              {activePage === item.name && <span className="blinking-cursor"></span>}
+            </Link>
           ))}
         </nav>
         
@@ -59,21 +69,20 @@ const Header: React.FC = () => {
       {/* Mobile Navigation Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
         {navItems.map((item) => (
-          <button
-            key={item}
-            className={`${styles.mobileNavItem} ${activePage === item ? styles.active : ''}`}
+          <Link
+            key={item.name}
+            href={item.path}
+            className={`${styles.mobileNavItem} ${activePage === item.name ? styles.active : ''}`}
             onClick={() => {
-              setActivePage(item);
+              setActivePage(item.name);
               setIsMobileMenuOpen(false);
             }}
           >
-            {item}
-            {activePage === item && <span className="blinking-cursor"></span>}
-          </button>
+            {item.name}
+            {activePage === item.name && <span className="blinking-cursor"></span>}
+          </Link>
         ))}
       </div>
     </header>
   );
-};
-
-export default Header;
+}
