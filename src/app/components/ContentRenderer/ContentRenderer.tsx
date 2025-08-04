@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PortableText } from '@portabletext/react';
-import { urlFor } from '../../lib/sanity';
+import { urlFor } from '../../../sanity/lib/sanity';
 import Image from 'next/image';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';

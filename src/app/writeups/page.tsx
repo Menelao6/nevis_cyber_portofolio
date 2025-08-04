@@ -1,5 +1,5 @@
 import WriteupList from '../components/WriteupList/WriteupList';
-import { client } from '../lib/sanity';
+import { client } from '../../sanity/lib/sanity';
 import { groq } from 'next-sanity';
 import styles from './Writeups.module.css';
 import Header from '../components/Header/Header';
@@ -16,6 +16,8 @@ export default async function WriteupsPage() {
       categories[]->{title}
     }
   `);
+  console.log('Fetched writeups:', writeups);
+
 
   return (
     <div className={styles.container}>

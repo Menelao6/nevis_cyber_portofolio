@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { urlFor } from '../../lib/sanity';
+import { urlFor } from '../../../sanity/lib/sanity';
 import Image from 'next/image';
 import styles from './WriteupList.module.css';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { urlFor } from '../../lib/sanity';
+import { urlFor } from '../../../sanity/lib/sanity';
 import Image from 'next/image';
 import ContentRenderer from '../ContentRenderer/ContentRenderer';
 import styles from './WriteupDetail.module.css';
