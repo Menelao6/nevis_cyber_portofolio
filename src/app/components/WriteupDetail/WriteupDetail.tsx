@@ -1,8 +1,17 @@
-import React from 'react';
-import { urlFor } from '../../../sanity/lib/sanity';
-import Image from 'next/image';
-import ContentRenderer from '../ContentRenderer/ContentRenderer';
-import styles from './WriteupDetail.module.css';
+import React from "react";
+import { urlFor } from "../../../sanity/lib/sanity";
+import Image from "next/image";
+import ContentRenderer from "../ContentRenderer/ContentRenderer";
+import styles from "./WriteupDetail.module.css";
+import Link from "next/link";
+
+interface Author {
+  name: string;
+}
+
+interface Category {
+  title: string;
+}
 
 interface Writeup {
   _id: string;
@@ -11,8 +20,10 @@ interface Writeup {
   publishedAt: string;
   excerpt: string;
   coverImage: any;
+  competition: string;
   content: any;
-  categories: { title: string }[];
+  categories: Category[];
+  author: Author[];
 }
 
 interface Props {
@@ -31,14 +42,27 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
       <div className={styles.terminalHeader}>
         <div className={styles.promptLine}>
           <span className={styles.promptSymbol}>user@cybersecurity:~$</span>
-          <span className={styles.promptCommand}>cat {writeup.slug}</span>
+          <span className={styles.promptCommand}>cat {writeup.slug || 'writeup'}</span>
         </div>
       </div>
       
       <header className={styles.header}>
+        <div className={styles.competition}>{writeup.competition}</div>
         <h1 className={styles.title}>{writeup.title}</h1>
+        
         <div className={styles.meta}>
-          <span className={styles.date}>{formattedDate}</span>
+          <div className={styles.metaGroup}>
+            <span className={styles.date}>
+              <span className={styles.metaIcon}>📅</span> {formattedDate}
+            </span>
+            
+            {writeup.author && writeup.author.length > 0 && (
+              <span className={styles.author}>
+                <span className={styles.metaIcon}>👤</span> {writeup.author[0].name}
+              </span>
+            )}
+          </div>
+          
           <div className={styles.categories}>
             {writeup.categories?.map((category, index) => (
               <span key={index} className={styles.category}>
@@ -50,17 +74,18 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
       </header>
       
       {writeup.coverImage && (
-        <div className={styles.coverImage}>
+        <div className={styles.coverImageContainer}>
           <Image
             src={urlFor(writeup.coverImage).url()}
             alt={writeup.title}
-            layout="responsive"
-            width={1200}
-            height={630}
-            objectFit="cover"
+            width={800}
+            height={450}
+            className={styles.coverImage}
           />
         </div>
       )}
+      
+      <div className={styles.excerpt}>{writeup.excerpt}</div>
       
       <div className={styles.content}>
         <ContentRenderer content={writeup.content} />
@@ -69,8 +94,14 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
       <div className={styles.terminalFooter}>
         <div className={styles.promptLine}>
           <span className={styles.promptSymbol}>user@cybersecurity:~/writeups$</span>
-          <span className="blinking-cursor"></span>
+          <span className={styles.blinkingCursor}></span>
         </div>
+      </div>
+      
+      <div className={styles.backLinkContainer}>
+        <Link href="/writeups" className={styles.backLink}>
+          ← Back to all writeups
+        </Link>
       </div>
     </div>
   );

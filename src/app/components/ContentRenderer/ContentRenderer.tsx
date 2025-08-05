@@ -4,8 +4,6 @@ import React from 'react';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '../../../sanity/lib/sanity';
 import Image from 'next/image';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import styles from './ContentRenderer.module.css';
 
 export default function ContentRenderer({ content }: { content: any }) {
@@ -30,21 +28,24 @@ export default function ContentRenderer({ content }: { content: any }) {
       code: ({ value }: any) => {
         return (
           <div className={styles.codeBlock}>
-            <SyntaxHighlighter
-              language={value.language || 'text'}
-              style={atomDark}
-              customStyle={{ borderRadius: '4px' }}
-            >
-              {value.code}
-            </SyntaxHighlighter>
+            {value.filename && (
+              <div className={styles.filename}>{value.filename}</div>
+            )}
+            <pre className={styles.pre}>
+              <code className={styles.code}>{value.code}</code>
+            </pre>
           </div>
         );
       }
     },
     block: {
+      h1: ({ children }: any) => <h1 className={styles.h1}>{children}</h1>,
       h2: ({ children }: any) => <h2 className={styles.h2}>{children}</h2>,
       h3: ({ children }: any) => <h3 className={styles.h3}>{children}</h3>,
       normal: ({ children }: any) => <p className={styles.paragraph}>{children}</p>,
+      blockquote: ({ children }: any) => (
+        <blockquote className={styles.blockquote}>{children}</blockquote>
+      ),
     },
     list: {
       bullet: ({ children }: any) => <ul className={styles.list}>{children}</ul>,
@@ -58,6 +59,30 @@ export default function ContentRenderer({ content }: { content: any }) {
         </li>
       ),
       number: ({ children }: any) => <li className={styles.listItem}>{children}</li>,
+    },
+    marks: {
+      link: ({ children, value }: any) => {
+        const target = (value?.href || '').startsWith('http') ? '_blank' : undefined;
+        return (
+          <a 
+            href={value?.href} 
+            target={target}
+            rel={target === '_blank' ? 'noopener noreferrer' : ''}
+            className={styles.link}
+          >
+            {children}
+          </a>
+        );
+      },
+      strong: ({ children }: any) => {
+        return <strong className={styles.strong}>{children}</strong>;
+      },
+      em: ({ children }: any) => {
+        return <em className={styles.em}>{children}</em>;
+      },
+      code: ({ children }: any) => {
+        return <code className={styles.inlineCode}>{children}</code>;
+      }
     },
   };
 

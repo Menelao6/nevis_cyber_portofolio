@@ -1,3 +1,4 @@
+/* Image styles */
 .imageBlock {
   margin: 2rem 0;
 }
@@ -17,11 +18,44 @@
   font-style: italic;
 }
 
+/* Code block styles */
 .codeBlock {
   margin: 2rem 0;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.filename {
+  background-color: #2d2d2d;
+  color: #9cdcfe;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.code {
+  display: block;
+  font-family: inherit;
+}
+
+/* Headings */
+.h1 {
+  color: #00FF00;
+  margin: 3rem 0 1.5rem;
+  font-size: 1.8rem;
 }
 
 .h2 {
@@ -36,6 +70,7 @@
   font-size: 1.5rem;
 }
 
+/* Paragraph */
 .paragraph {
   color: #DDDDDD;
   font-size: 1.1rem;
@@ -43,6 +78,17 @@
   margin-bottom: 1.5rem;
 }
 
+/* Blockquote */
+.blockquote {
+  border-left: 4px solid #00FF00;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  background-color: rgba(0, 255, 0, 0.05);
+  color: #c5d9c5;
+  font-style: italic;
+}
+
+/* Lists */
 .list {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
@@ -51,6 +97,9 @@
 .listItem {
   margin-bottom: 0.8rem;
   position: relative;
+  color: #DDDDDD;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .listMarker {
@@ -59,8 +108,40 @@
   left: -1.2rem;
 }
 
+/* Marks */
+.link {
+  color: #4dabf7;
+  text-decoration: none;
+  border-bottom: 1px dashed #4dabf7;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  color: #00FF00;
+  border-bottom: 1px solid #00FF00;
+}
+
+.strong {
+  color: #00FF00;
+  font-weight: 600;
+}
+
+.em {
+  font-style: italic;
+}
+
+.inlineCode {
+  background-color: #2d2d2d;
+  color: #e9ecef;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  .h2 {
+  .h1, .h2 {
     font-size: 1.6rem;
   }
   
@@ -68,7 +149,12 @@
     font-size: 1.3rem;
   }
   
-  .paragraph {
+  .paragraph, .listItem {
     font-size: 1rem;
+  }
+
+  .codeBlock {
+    font-size: 0.8rem;
+    padding: 0.8rem;
   }
 }

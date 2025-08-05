@@ -4,20 +4,25 @@ import { groq } from 'next-sanity';
 import styles from './Writeups.module.css';
 import Header from '../components/Header/Header';
 
+// Add revalidation option
+const fetchOptions = {
+  next: { revalidate: 30 } // Revalidate every 30 seconds
+};
+
 export default async function WriteupsPage() {
   const writeups = await client.fetch(groq`
     *[_type == "writeup"] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      publishedAt,
-      excerpt,
-      coverImage,
-      categories[]->{title}
+    _id,
+    title,
+    "slug": slug.current,
+    publishedAt,
+    excerpt,
+    coverImage,
+    competition,
+    categories[]->{title},
+    author[]->{name}
     }
-  `);
-  console.log('Fetched writeups:', writeups);
-
+  `, {}, fetchOptions);
 
   return (
     <div className={styles.container}>

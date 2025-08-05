@@ -1,13 +1,18 @@
-import { client } from '../../../sanity/lib/client';
+import { client } from '../../../sanity/lib/sanity';
 import { groq } from 'next-sanity';
 import WriteupDetail from '../../components/WriteupDetail/WriteupDetail';
+import { notFound } from 'next/navigation';
+
+const fetchOptions = {
+  next: { revalidate: 30 }
+};
 
 export async function generateStaticParams() {
   const writeups = await client.fetch(groq`
-    *[_type == "writeup"] {
+    *[_type == "writeup" && defined(slug.current)] {
       "slug": slug.current
     }
-  `);
+  `, {}, fetchOptions);
 
   return writeups.map((writeup: any) => ({
     slug: writeup.slug,
@@ -19,24 +24,35 @@ export default async function WriteupPage({
 }: {
   params: { slug: string };
 }) {
+  console.log('Fetching writeup for slug:', params.slug);
+  
   const writeup = await client.fetch(
     groq`
       *[_type == "writeup" && slug.current == $slug][0] {
         _id,
         title,
-        slug,
+        "slug": slug.current,
         publishedAt,
         excerpt,
         coverImage,
+        competition,
         content,
-        categories[]->{title}
+        categories[]->{title},
+        author[]->{name}
       }
     `,
-    { slug: params.slug }
+    { slug: params.slug },
+    fetchOptions
   );
 
+  console.log('Fetched writeup:', writeup ? {
+    title: writeup.title,
+    slug: writeup.slug,
+    exists: !!writeup
+  } : 'NOT FOUND');
+
   if (!writeup) {
-    return <div>Writeup not found</div>;
+    notFound();
   }
 
   return <WriteupDetail writeup={writeup} />;

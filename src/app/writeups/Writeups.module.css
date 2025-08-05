@@ -151,6 +151,83 @@
   animation: blink 1s infinite;
 }
 
+.errorContainer {
+  background-color: #1e1e1e;
+  border: 1px solid #ff5555;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: #f8f8f8;
+}
+
+.errorTitle {
+  color: #ff5555;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.errorSuggestions {
+  background-color: #252526;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.errorSuggestions p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.errorSuggestions ul {
+  padding-left: 1.5rem;
+}
+
+.errorSuggestions li {
+  margin-bottom: 0.5rem;
+}
+
+.homeLink {
+  display: inline-block;
+  background-color: #6272a4;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.homeLink:hover {
+  background-color: #44475a;
+}
+
+.backLinkContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #44475a;
+  color: #f8f8f2;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.backLink:hover {
+  background-color: #6272a4;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
