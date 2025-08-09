@@ -2,23 +2,90 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card {
   background: rgba(20, 20, 20, 0.8);
   border: 1px solid rgba(0, 255, 0, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 8px;
+  padding: 1.5rem;
   position: relative;
   transition: all 0.3s ease;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: #00FF00;
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+}
+
+.cardTitle {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.excerpt {
+  color: #AAAAAA;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+    line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.date {
+  color: #AAAAAA;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date::before {
+  content: "📅";
+}
+
+.category {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00FF00;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.readMore {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  color: #00FFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.readMore:hover {
+  transform: translateY(-5px);
+  color: #00FF00;
 }
 
 .cardGlow {
@@ -35,129 +102,6 @@
 
 .card:hover .cardGlow {
   opacity: 1;
-}
-
-.cardImage {
-  height: 200px;
-  overflow: hidden;
-}
-
-.coverImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .coverImage {
-  transform: scale(1.05);
-}
-
-.cardContent {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.cardHeader {
-  margin-bottom: 1rem;
-}
-
-.competition {
-  color: #00FFFF;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.cardTitle {
-  color: #FFFFFF;
-  font-size: 1.3rem;
-  margin: 0;
-  line-height: 1.4;
-}
-
-.cardBody {
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.excerpt {
-  color: #AAAAAA;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-}
-
-.date {
-  color: #AAAAAA;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.date::before {
-  content: "📅";
-}
-
-.author {
-  color: #00FF00;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.author::before {
-  content: "👤";
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.category {
-  background: rgba(0, 255, 0, 0.1);
-  color: #00FF00;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-}
-
-.readMore {
-  background: transparent;
-  border: none;
-  color: #00FFFF;
-  font-family: 'IBM Plex Mono', monospace;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-  position: relative;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.readMore:hover {
-  color: #00FF00;
 }
 
 .readMore::after {
@@ -202,20 +146,15 @@
 
 @media (max-width: 480px) {
   .card {
-    padding: 0;
-  }
-  
-  .cardContent {
     padding: 1.2rem;
   }
   
-  .cardFooter {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .cardTitle {
+    font-size: 1.2rem;
   }
   
-  .readMore {
-    align-self: flex-start;
+  .metaRow {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 }

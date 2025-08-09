@@ -1,15 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { urlFor } from "../../../sanity/lib/sanity";
-import Image from "next/image";
 import styles from "./WriteupList.module.css";
-
-interface Author {
-  name: string;
-}
 
 interface Category {
   title: string;
+}
+
+interface Author {
+  name: string;
 }
 
 interface Writeup {
@@ -41,55 +39,29 @@ const WriteupList: React.FC<Props> = ({ writeups }) => {
     <div className={styles.cards}>
       {writeups.map((writeup) => (
         <div key={writeup._id} className={styles.card}>
-          {writeup.coverImage && (
-            <div className={styles.cardImage}>
-              <Image
-                src={urlFor(writeup.coverImage).url()}
-                alt={writeup.title}
-                width={400}
-                height={250}
-                className={styles.coverImage}
-              />
-            </div>
+          <h3 className={styles.cardTitle}>{writeup.title}</h3>
+          
+          {writeup.excerpt && (
+            <p className={styles.excerpt}>{writeup.excerpt}</p>
           )}
           
-          <div className={styles.cardContent}>
-            <div className={styles.cardHeader}>
-              <div className={styles.competition}>{writeup.competition}</div>
-              <h3 className={styles.cardTitle}>{writeup.title}</h3>
-            </div>
+          <div className={styles.metaRow}>
+            <span className={styles.date}>
+              {formatDate(writeup.publishedAt)}
+            </span>
             
-            <div className={styles.cardBody}>
-              <p className={styles.excerpt}>{writeup.excerpt}</p>
-            </div>
-            
-            <div className={styles.cardFooter}>
-              <div className={styles.meta}>
-                <span className={styles.date}>
-                  {formatDate(writeup.publishedAt)}
-                </span>
-                
-                {writeup.author && writeup.author.length > 0 && (
-                  <span className={styles.author}>
-                    by {writeup.author[0].name}
-                  </span>
-                )}
-                
-                <div className={styles.categories}>
-                  {writeup.categories?.map((category, index) => (
-                    <span key={index} className={styles.category}>
-                      {category.title}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <Link href={`/writeups/${writeup.slug}`} className={styles.readMore}>
-                [ read more ]
-                <span className={styles.cursor}>_</span>
-              </Link>
-            </div>
+            {writeup.categories?.length > 0 && (
+              <span className={styles.category}>
+                {writeup.categories[0].title}
+              </span>
+            )}
           </div>
+          
+          <Link href={`/writeups/${writeup.slug}`} className={styles.readMore}>
+            [ read more ]
+            <span className={styles.cursor}>_</span>
+          </Link>
+          
           <div className={styles.cardGlow}></div>
         </div>
       ))}
