@@ -4,6 +4,16 @@ import { groq } from 'next-sanity';
 import styles from './Writeups.module.css';
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Security Write-ups | Nevis Hysenaj',
+  description: 'Detailed security write-ups, CTF challenge solutions, and vulnerability research by Nevis Hysenaj.',
+  openGraph: {
+    title: 'Security Write-ups | Nevis Hysenaj',
+    description: 'Explore a collection of in-depth write-ups on security vulnerabilities, exploits, and CTF challenges.',
+  },
+};
 
 const fetchOptions = {
   next: { revalidate: 30 }

@@ -5,12 +5,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
-        port: '',
-        pathname: '/**',
       },
     ],
   },
-
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.js\.map$/,
+      use: ['source-map-loader'],
+      enforce: 'pre',
+    });
+    return config;
+  },
+  productionBrowserSourceMaps: true,
 };
 
 module.exports = nextConfig;
