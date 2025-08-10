@@ -1,0 +1,14 @@
+{
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_SANITY_PROJECT_ID": "@sanity_project_id",
+      "NEXT_PUBLIC_SANITY_DATASET": "@sanity_dataset"
+    }
+  },
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap"
+    }
+  ]
+}
