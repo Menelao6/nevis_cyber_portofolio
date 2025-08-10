@@ -22,7 +22,6 @@ const FeaturedWriteups: React.FC = () => {
           {writeups.map((writeup) => (
             <div key={writeup.id} className={styles.card}>
               <div className={styles.cardHeader}>
-                <div className={styles.cardIcon}>{writeup.icon}</div>
                 <h3 className={styles.cardTitle}>{writeup.title}</h3>
               </div>
               <div className={styles.cardBody}>
