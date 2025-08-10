@@ -3,14 +3,14 @@ import './globals.css';
 import Providers from './Providers';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://exploit-terminal.vercel.app'),
+  metadataBase: new URL('https://nevis.vercel.app'),
   title: {
     template: '%s | CyberTerminal',
     default: 'CyberTerminal | Security Research & Write-ups'
   },
   description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
   keywords: ['security', 'write-ups', 'cybersecurity', 'vulnerability', 'research'],
-  authors: [{ name: 'Your Name', url: 'https://exploit-terminal.vercel.app' }],
+  authors: [{ name: 'Your Name', url: 'https://nevis.vercel.app' }],
   openGraph: {
     title: 'CyberTerminal | Security Research & Write-ups',
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://exploit-terminal.vercel.app',
+    canonical: 'https://nevis.vercel.app',
   },
 };
 

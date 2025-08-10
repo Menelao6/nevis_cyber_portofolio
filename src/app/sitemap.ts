@@ -9,7 +9,7 @@ type WriteupSitemap = {
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://exploit-terminal.vercel.app';
+  const baseUrl = 'https://nevis.vercel.app';
   
   try {
     const writeups = await getWriteups() as WriteupSitemap[];

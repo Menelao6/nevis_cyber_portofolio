@@ -1,4 +1,3 @@
-import { ScriptProps } from 'next/script';
 
 export default function StructuredData({ data }: { data: any }) {
   return (
