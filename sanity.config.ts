@@ -6,7 +6,7 @@ import {schemaTypes} from './src/sanity/schemaTypes'
 import { defaultDocumentNode } from './src/sanity/desk/preview';
 
 export default defineConfig({
-  name: 'cybersecurity-terminal',
+  name: 'nevis',
   title: 'Cybersecurity Terminal Studio',
   projectId: "krdursmh",
   dataset: "production",

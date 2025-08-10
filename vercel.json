@@ -1,8 +1,8 @@
 {
   "build": {
     "env": {
-      "NEXT_PUBLIC_SANITY_PROJECT_ID": "@sanity_project_id",
-      "NEXT_PUBLIC_SANITY_DATASET": "@sanity_dataset"
+      "NEXT_PUBLIC_SANITY_PROJECT_ID": "krdursmh",
+      "NEXT_PUBLIC_SANITY_DATASET": "production"
     }
   },
   "routes": [
