@@ -3,20 +3,19 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Add this import
 import { useTheme } from '../ThemeProvider/ThemeProvider';
 
 export default function Header() {
-  const [activePage, setActivePage] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
+  const pathname = usePathname(); // Get current path
   
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Write-ups', path: '/writeups' },
-    { name: 'Certifications', path: '#certifications' },
-    { name: 'Blog', path: '#blog' },
-    { name: 'Contact', path: '#contact' }
+    { name: 'About', path: '/about' },
   ];
 
   useEffect(() => {
@@ -37,22 +36,19 @@ export default function Header() {
           <span className="blinking-cursor"></span>
         </div>
         
-        {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.path}
-              className={`${styles.navItem} ${activePage === item.name ? styles.active : ''}`}
-              onClick={() => setActivePage(item.name)}
+              className={`${styles.navItem} ${pathname === item.path ? styles.active : ''}`}
             >
               {item.name}
-              {activePage === item.name && <span className="blinking-cursor"></span>}
+              {pathname === item.path && <span className="blinking-cursor"></span>}
             </Link>
           ))}
         </nav>
         
-        {/* Mobile Navigation Toggle */}
         <button 
           className={styles.mobileToggle}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -66,20 +62,16 @@ export default function Header() {
         </button>
       </div>
       
-      {/* Mobile Navigation Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
         {navItems.map((item) => (
           <Link
             key={item.name}
             href={item.path}
-            className={`${styles.mobileNavItem} ${activePage === item.name ? styles.active : ''}`}
-            onClick={() => {
-              setActivePage(item.name);
-              setIsMobileMenuOpen(false);
-            }}
+            className={`${styles.mobileNavItem} ${pathname === item.path ? styles.active : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             {item.name}
-            {activePage === item.name && <span className="blinking-cursor"></span>}
+            {pathname === item.path && <span className="blinking-cursor"></span>}
           </Link>
         ))}
       </div>

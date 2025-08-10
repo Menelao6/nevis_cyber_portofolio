@@ -27,7 +27,7 @@ const FeaturedWriteups: React.FC = () => {
               <div className={styles.cardBody}>
                 <p>{writeup.description}</p>
               </div>
-              <div className={styles.cardFooter}>
+
                 <div className={styles.meta}>
                   <span className={styles.date}>{writeup.date}</span>
                   <span className={styles.category}>{writeup.category}</span>
@@ -37,7 +37,6 @@ const FeaturedWriteups: React.FC = () => {
                   [ read more ]<span className="blinking-cursor"></span>
                 </button>
                 </Link>
-              </div>
               <div className={styles.cardGlow}></div>
             </div>
           ))}

@@ -42,8 +42,8 @@
 .card {
   background: rgba(20, 20, 20, 0.8);
   border: 1px solid rgba(0, 255, 0, 0.2);
-  border-radius: 10px;
-  padding: 2rem;
+  border-radius: 8px;
+  padding: 1.5rem;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -53,6 +53,7 @@
 .card:hover {
   transform: translateY(-5px);
   border-color: #00FF00;
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
 }
 
 .cardGlow {
@@ -86,42 +87,49 @@
 .cardTitle {
   color: #FFFFFF;
   font-size: 1.3rem;
-  margin: 0;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 .cardBody {
-  margin-bottom: 1.5rem;
-}
-
-.cardBody p {
   color: #AAAAAA;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin: 0 0 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+    line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .meta {
   display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.1);
 }
 
 .date {
   color: #AAAAAA;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date::before {
+  content: "📅";
 }
 
 .category {
-  color: #00FFFF;
-  background: rgba(0, 255, 255, 0.1);
-  padding: 0.2rem 0.6rem;
+  background: rgba(0, 255, 0, 0.1);
+  color: #00FF00;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
+  font-size: 0.85rem;
 }
 
 .readMore {
@@ -204,11 +212,5 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-  }
-  
-  .cardFooter {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
 }
