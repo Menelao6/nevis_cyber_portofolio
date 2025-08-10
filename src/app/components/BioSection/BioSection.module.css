@@ -1,0 +1,66 @@
+.bio {
+  margin-bottom: 4rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.terminalPrompt {
+  font-size: 1.1rem;
+  color: #00FFFF;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #00FF00;
+  border-radius: 3px;
+}
+
+.sectionSubtitle {
+  color: #AAAAAA;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 1.5rem auto 0;
+  line-height: 1.6;
+}
+
+.content {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  line-height: 1.8;
+  color: #DDDDDD;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+}

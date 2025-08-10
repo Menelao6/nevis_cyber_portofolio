@@ -1,0 +1,216 @@
+.writeups {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.terminalPrompt {
+  font-size: 1.1rem;
+  color: #00FF00;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  color: #AAAAAA;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00FF00;
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 0, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+  font-size: 1.8rem;
+  color: #00FF00;
+}
+
+.cardTitle {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.cardBody {
+  color: #AAAAAA;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+    line-clamp: inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.date {
+  color: #AAAAAA;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date::before {
+  content: "📅";
+}
+
+.category {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00FF00;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.readMore {
+  background: transparent;
+  border: none;
+  color: #00FFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.readMore:hover {
+  color: #00FF00;
+}
+
+.readMore::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00FF00;
+  transition: width 0.3s ease;
+}
+
+.readMore:hover::after {
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .writeups {
+    padding: 4rem 0;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .writeups {
+    padding: 3rem 1rem;
+  }
+  
+  .terminalPrompt {
+    font-size: 0.95rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
