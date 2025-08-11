@@ -1,22 +1,24 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Providers from './Providers';
+import { Analytics } from "@vercel/analytics/next"
+
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nevis.vercel.app'),
+  metadataBase: new URL('https://nevis-portofolio.vercel.app'),
   title: {
     template: '%s | CyberTerminal',
     default: 'CyberTerminal | Security Research & Write-ups'
   },
   description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
   keywords: ['security', 'write-ups', 'cybersecurity', 'vulnerability', 'research'],
-  authors: [{ name: 'Your Name', url: 'https://nevis.vercel.app' }],
+  authors: [{ name: 'Nevis Hysenaj', url: 'https://nevis-portofolio.vercel.app' }],
   openGraph: {
     title: 'CyberTerminal | Security Research & Write-ups',
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og.webp',
         width: 1200,
         height: 630,
         alt: 'CyberTerminal Security Research',
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://nevis.vercel.app',
+    canonical: 'https://nevis-portofolio.vercel.app',
   },
 };
 
@@ -58,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Providers>
           {children}
+          <Analytics />
         </Providers>
       </body>
     </html>

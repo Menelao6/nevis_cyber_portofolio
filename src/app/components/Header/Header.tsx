@@ -3,14 +3,14 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // Add this import
+import { usePathname } from 'next/navigation';
 import { useTheme } from '../ThemeProvider/ThemeProvider';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
-  const pathname = usePathname(); // Get current path
+  const pathname = usePathname();
   
   const navItems = [
     { name: 'Home', path: '/' },

@@ -32,8 +32,8 @@ const Footer: React.FC = () => {
           <div className={styles.footerSection}>
             <h4 className={styles.sectionTitle}>Connect</h4>
             <ul className={styles.footerLinks}>
-              <li><a href="mailto:contact@cybersecurityterminal.com">Email</a></li>
-              <li><a href="https://linkedin.com/in/cybersecurity-expert" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="mailto:hysenajnevis002@gmail.com">Email</a></li>
+              <li><a href="https://https://www.linkedin.com/in/nevis-hysenaj/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/cybersecurity-expert" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               <li><a href="https://twitter.com/cybersec_expert" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             </ul>

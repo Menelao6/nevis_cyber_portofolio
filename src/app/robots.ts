@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://nevis.vercel.app/sitemap.xml',
+    sitemap: 'https://nevis-portofolio.vercel.app/sitemap.xml',
   };
 }

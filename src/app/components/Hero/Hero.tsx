@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
               <span className={styles.dividerLine}></span>
             </div>
             
-            <Link href="certifications">
+            <Link href="about">
                <button className={styles.secondaryButton}>
               [ cat certifications/* ]
             </button>
