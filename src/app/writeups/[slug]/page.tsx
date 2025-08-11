@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: {
     title: `${writeup.title} | CyberTerminal`,
     description: writeup.excerpt,
     alternates: {
-      canonical: `https://exploit-terminal.vercel.app/writeups/${params.slug}`,
+      canonical: `https://nevis-portofolio.vercel.app/writeups/${params.slug}`,
     },
     keywords: [
       'security',
@@ -73,12 +73,12 @@ export async function generateMetadata({ params }: {
     ],
     authors: writeup.author?.map(a => ({ 
       name: a.name,
-      url: `https://exploit-terminal.vercel.app/about`
+      url: `https://nevis-portofolio.vercel.app/about`
     })) || [],
     openGraph: {
       title: writeup.title,
       description: writeup.excerpt,
-      url: `https://exploit-terminal.vercel.app/writeups/${params.slug}`,
+      url: `https://nevis-portofolio.vercel.app/writeups/${params.slug}`,
       images: [
         {
           url: imageUrl,
