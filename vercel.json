@@ -4,11 +4,5 @@
       "NEXT_PUBLIC_SANITY_PROJECT_ID": "krdursmh",
       "NEXT_PUBLIC_SANITY_DATASET": "production"
     }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ]
+  }
 }
