@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import './globals.css';
 import Providers from './Providers';
 
 export const metadata: Metadata = {
