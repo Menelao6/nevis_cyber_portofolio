@@ -24,7 +24,7 @@ export default function AboutPage() {
       <main className={styles.main}>
         <div className={styles.terminalHeader}>
           <div className={styles.promptLine}>
-            <span className={styles.promptSymbol}>user@cybersecurity:~$</span>
+            <span className={styles.promptSymbol}>root@home:~$</span>
             <span className={styles.promptCommand}>cat about_me.txt</span>
           </div>
         </div>

@@ -96,7 +96,7 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
         
         <div className={styles.terminalFooter}>
           <div className={styles.promptLine}>
-            <span className={styles.promptSymbol}>user@cybersecurity:~/writeups$</span>
+            <span className={styles.promptSymbol}>root@home:~/writeups$</span>
             <span className={styles.blinkingCursor}></span>
           </div>
         </div>

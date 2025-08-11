@@ -10,26 +10,24 @@ const BioSection = () => {
         </div>
         <h2 className={styles.sectionTitle}>About Me</h2>
 <p className={styles.sectionSubtitle}>
-  Cybersecurity professional with a focus on ethical hacking, penetration testing, and CTF competitions.
+  Cybersecurity enthusiast, penetration tester in training, and CTF competitor.
 </p>
 </div>
 
 <div className={styles.content}>
   <p>
-    I'm Nevis Hysenaj, a dedicated cybersecurity specialist passionate about uncovering and mitigating 
-    security vulnerabilities. My expertise spans penetration testing, vulnerability research, and secure 
-    application development. Over the years, I've actively participated in Capture The Flag (CTF) competitions 
-    and engaged with global security communities.
+    I'm Nevis Hysenaj — a cybersecurity enthusiast, penetration tester in training, and CTF competitor. 
+    I love exploring system weaknesses, building exploits, and then figuring out how to defend against them.
+
   </p>
   <p>
-    My work blends deep technical knowledge with strategic, creative problem-solving — allowing me to tackle 
-    complex security challenges and deliver practical, effective solutions. I also enjoy creating writeups 
-    to share my findings and help others learn from real-world security scenarios.
+    My toolkit includes Nmap, Burp Suite, Wireshark, and Python scripting, 
+    and I regularly practice on platforms like HackTheBox and TryHackMe. 
+    I'm passionate about bridging Red and Blue team skills, aiming to grow as a purple teamer who understands both attack and defense.
   </p>
   <p>
-    When I'm not testing systems or analyzing exploits, you'll often find me contributing to open-source 
-    security tools, mentoring aspiring ethical hackers, or exploring new cybersecurity certifications 
-    to sharpen my skills.
+    Cybersecurity isn't just my career path — it's my obsession. 
+    Whether I'm solving a CTF challenge or digging into new vulnerabilities, I'm always chasing the next “flag.”
   </p>
 </div>
     </section>

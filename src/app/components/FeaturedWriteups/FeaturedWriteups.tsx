@@ -10,7 +10,7 @@ const FeaturedWriteups: React.FC = () => {
       <div className="container">
         <div className={styles.sectionHeader}>
           <div className={styles.terminalPrompt}>
-            user@cybersecurity:~/featured_write-ups$ ls
+            root@home:~/featured_write-ups$ ls
           </div>
           <h2 className={styles.sectionTitle}>Featured Security Write-ups</h2>
           <p className={styles.sectionSubtitle}>

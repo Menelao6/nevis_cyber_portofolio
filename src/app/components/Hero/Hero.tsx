@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
             <span className={styles.minimize}></span>
             <span className={styles.maximize}></span>
           </div>
-          <div className={styles.terminalTitle}>user@cybersecurity:~</div>
+          <div className={styles.terminalTitle}>root@home:~</div>
         </div>
         
         <div className={styles.terminalContent}>
@@ -37,11 +37,11 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className={styles.headline}>
-            Securing the <span className={styles.highlight}>Digital Spaces</span>
+            Breaking Barriers<span className={styles.highlight}>Securing Systems</span>
           </h1>
           
           <p className={styles.subtitle}>
-            Penetration Testing • Vulnerability Research • Security Architecture
+            Capture The Flag • Penetration Testing • Infrastructure Defense
           </p>
           
           <div className={styles.ctaContainer}>

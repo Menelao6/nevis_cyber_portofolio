@@ -7,41 +7,18 @@ export interface Writeup {
 }
 
 export const writeups: Writeup[] = [
-  {
+    {
     id: 1,
-    title: 'Cross-Site Scripting (XSS) Explained',
-    date: '2023-09-15',
-    category: 'Web Security',
-    description: 'Deep dive into XSS vulnerabilities and prevention techniques.',
+    title: '[WWFCTF] - Silver Moon ',
+    date: '2025-29-07',
+    category: 'Forensics',
+    description: 'Rumors whisper of a shadow moving beneath the Silver Moon. Investigate the strange occurrences and reveal the demons hidden technique before its too late.',
   },
   {
     id: 2,
-    title: 'Practical Network Reconnaissance',
-    date: '2023-09-10',
-    category: 'Network Security',
-    description: 'Effective methods for network scanning and reconnaissance.',
+    title: '[L3akCTF] - L3ak Advanced Defenders',
+    date: '2025-14-07',
+    category: 'Forensics',
+    description: 'You have been trying to infiltrate the L3ak office for some time, and your friend just gave you this mysterious snapshot. What information can you glean from it?',
   },
-  {
-    id: 3,
-    title: 'Introduction to Penetration Testing',
-    date: '2023-09-05',
-    category: 'Red Teaming',
-    description: 'Fundamentals of ethical hacking and penetration testing.',
-  },
-  {
-    id: 4,
-    title: 'Practical Network Reconnaissance',
-    date: '2023-09-10',
-    category: 'Network Security',
-    description: 'Effective methods for network scanning and reconnaissance.',
-  },
-  {
-    id: 5,
-    title: 'Introduction to Penetration Testing',
-    date: '2023-09-05',
-    category: 'Red Teaming',
-    description: 'Fundamentals of ethical hacking and penetration testing.',
-  },
-  
-  
 ]

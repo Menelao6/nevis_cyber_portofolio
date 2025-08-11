@@ -10,22 +10,20 @@ const Footer: React.FC = () => {
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
             <div className={styles.terminalPrompt}>
-              user@cybersecurity:~$ cd contact/
+              root@home:~$ cd contact/
             </div>
             <h3 className={styles.brandName}>Cybersecurity Terminal</h3>
             <p className={styles.brandTagline}>
-              Exploring vulnerabilities, securing digital spaces
+              Breaking Barriers, Securing Systems
             </p>
           </div>
           
           <div className={styles.footerSection}>
             <h4 className={styles.sectionTitle}>Navigation</h4>
             <ul className={styles.footerLinks}>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#writeups">Write-ups</a></li>
-              <li><a href="#certifications">Certifications</a></li>
-              <li><a href="#capabilities">Capabilities</a></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/writeups">Write-ups</a></li>
+              <li><a href="/about">Certifications</a></li>
             </ul>
           </div>
           
@@ -45,7 +43,7 @@ const Footer: React.FC = () => {
             © {currentYear} Cybersecurity Terminal. All rights reserved.
           </div>
           <div className={styles.terminalPrompt}>
-            user@cybersecurity:~/contact$<span className="blinking-cursor"></span>
+            root@home:~/contact$<span className="blinking-cursor"></span>
           </div>
         </div>
       </div>

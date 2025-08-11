@@ -9,30 +9,23 @@ export interface Certificate {
 export const certificates: Certificate[] = [
   {
     id: 1,
-    name: 'Certified API Security Analyst (CASA)',
+    name: 'Certified API Security Analyst',
     issuer: 'APIsec University',
     date: 'September 2024',
     icon: '🔒'
   },
   {
     id: 2,
-    name: 'OWASP API Security Top 10',
-    issuer: 'APIsec University',
-    date: 'November 2023',
-    icon: '🔍'
-  },
-  {
-    id: 3,
-    name: 'Purple Teaming Fundamentals',
+    name: 'CWL Purple Teaming Fundamentals',
     issuer: 'CyberWarFare Labs',
     date: 'November 2023',
     icon: '🟣'
   },
   {
-    id: 4,
-    name: 'ISO/IEC 27001 Information Security Associate',
-    issuer: 'SkillFront',
-    date: 'November 2022',
-    icon: '📜'
+    id: 3,
+    name: 'OWASP API Security Top 10',
+    issuer: 'APIsec University',
+    date: 'November 2023',
+    icon: '🔍'
   }
 ]

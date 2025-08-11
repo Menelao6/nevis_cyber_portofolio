@@ -42,11 +42,13 @@ export default async function WriteupsPage() {
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <div className={styles.terminalPrompt}>
-            user@cybersecurity:~/writeups$ ls
+            root@home:~/writeups$ ls
           </div>
           <h1 className={styles.sectionTitle}>Security Write-ups</h1>
           <p className={styles.sectionSubtitle}>
-            In-depth analysis of vulnerabilities, exploits, and security research
+            Here's where I share my CTF journeys — the tools I used, 
+            the paths I took, and the lessons learned. 
+            No spoilers for active challenges, just clean, technical breakdowns and a few “aha” moments.
           </p>
         </div>
         

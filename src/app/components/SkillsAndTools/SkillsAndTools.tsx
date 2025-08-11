@@ -1,9 +1,7 @@
 import styles from "./SkillsAndTools.module.css"
 
 import {
-  capabilities,
   tools,
-  Capability,
   Tool
 } from '../../json-datas/SkillsAndTools-data'
 
@@ -21,30 +19,6 @@ const SkillsAndTools: React.FC = () => {
           <p className={styles.sectionSubtitle}>
             Practical skills and tools for comprehensive security operations
           </p>
-        </div>
-
-        <div className={styles.capabilitiesGrid}>
-          {capabilities.map((cap: Capability) => (
-            <div key={cap.id} className={styles.capabilityCard}>
-              <div className={styles.cardHeader}>
-                <div className={styles.cardIcon}>{cap.icon}</div>
-                <h3 className={styles.cardTitle}>
-                  {cap.category}
-                </h3>
-              </div>
-              <ul className={styles.skillList}>
-                {cap.skills.map((skill, idx) => (
-                  <li key={idx} className={styles.skillItem}>
-                    <span className={styles.skillName}>
-                      {skill}
-                    </span>
-                    <span className="blinking-cursor"></span>
-                  </li>
-                ))}
-              </ul>
-              <div className={styles.cardGlow}></div>
-            </div>
-          ))}
         </div>
 
         <div className={styles.toolsSection}>

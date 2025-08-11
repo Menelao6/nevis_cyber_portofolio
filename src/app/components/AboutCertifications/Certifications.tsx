@@ -1,8 +1,7 @@
 import styles from "./Certifications.module.css"
 import React from 'react'
-import Link from "next/link"
 
-import {certificates, Certificate} from "../../json-datas/certifications-data"
+import {certificates, Certificate} from "../../json-datas/aboutCertifications-data"
 
 export default function Certifications() {
   return (

@@ -64,6 +64,11 @@
   box-shadow: 0 10px 25px rgba(0, 255, 0, 0.15);
 }
 
+.sectionSubtitle {
+  color: var(--gray);
+  padding: 1rem 0;
+}
+
 .cardGlow {
   position: absolute;
   top: 0;
