@@ -13,10 +13,7 @@ export default function Certifications() {
             <span className={styles.promptCommand}>cat certifications/*</span>
             <span className={styles.promptSymbol}>]</span>
           </div>
-          <h2 className={styles.sectionTitle}>Certifications &amp; Credentials</h2>
-          <p className={styles.sectionSubtitle}>
-            Validated expertise in cybersecurity domains
-          </p>
+          <h2 className={styles.sectionTitle}>Certifications &amp; Courses</h2>
         </div>
         
         <div className={styles.certGrid}>
@@ -41,4 +38,5 @@ export default function Certifications() {
       </div>
     </section>
   )
+
 }
