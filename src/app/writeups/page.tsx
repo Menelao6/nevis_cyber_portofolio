@@ -7,11 +7,11 @@ import Footer from "../components/Footer/Footer"
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Security Write-ups | Nevis Hysenaj',
-  description: 'Detailed security write-ups, CTF challenge solutions, and vulnerability research by Nevis Hysenaj.',
+  title: 'CTF Write-ups Collection',
+  description: 'Browse my comprehensive collection of CTF writeups and solutions',
   openGraph: {
-    title: 'Security Write-ups | Nevis Hysenaj',
-    description: 'Explore a collection of in-depth write-ups on security vulnerabilities, exploits, and CTF challenges.',
+    title: 'CTF Write-ups Collection',
+    description: 'Browse my comprehensive collection of CTF writeups and solutions.',
   },
 };
 
@@ -44,11 +44,8 @@ export default async function WriteupsPage() {
           <div className={styles.terminalPrompt}>
             root@home:~/writeups$ ls
           </div>
-          <h1 className={styles.sectionTitle}>Security Write-ups</h1>
           <p className={styles.sectionSubtitle}>
-            Here's where I share my CTF journeys — the tools I used, 
-            the paths I took, and the lessons learned. 
-            No spoilers for active challenges, just clean, technical breakdowns and a few “aha” moments.
+          I've solved some CTF challenges and written about them. Here's where I share the evidence.
           </p>
         </div>
         
@@ -58,4 +55,5 @@ export default async function WriteupsPage() {
     <Footer />
     </div>
   );
+
 }
