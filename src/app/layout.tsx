@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
     images: [
       {
-        url: '/og.webp',
+        url: '/vercel.svg',
         width: 1200,
         height: 630,
         alt: 'CyberTerminal Security Research',
@@ -30,11 +30,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'CyberTerminal',
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@yourhandle',
-    creator: '@yourhandle',
-  },
+
   robots: {
     index: true,
     follow: true,
