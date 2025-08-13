@@ -41,7 +41,7 @@ export default function Certifications() {
         </div>
         
         <div className={styles.viewAll}>
-          <Link href="/certifications">
+          <Link href="/about#certifications">
           <button className={styles.viewAllButton}>
             [ ls all_Certifications ]
           </button></Link>

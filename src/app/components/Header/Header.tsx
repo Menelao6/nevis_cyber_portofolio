@@ -32,7 +32,9 @@ export default function Header() {
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
           <span className={styles.prompt}>&gt;</span>
-          <span>CyberTerminal</span>
+          <Link href="/">
+            <span>CyberTerminal</span>
+          </Link>
           <span className="blinking-cursor"></span>
         </div>
         
