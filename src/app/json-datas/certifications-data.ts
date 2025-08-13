@@ -20,12 +20,14 @@ export const certificates: Certificate[] = [
     issuer: 'CyberWarFare Labs',
     date: 'November 2023',
     icon: '🟣'
-  },
+  }, 
   {
     id: 3,
-    name: 'OWASP API Security Top 10',
-    issuer: 'APIsec University',
-    date: 'November 2023',
-    icon: '🔍'
+    name: 'Practical Ethical Hacking - The Complete Course',
+    issuer: 'TCM Security',
+    date: 'December 2022',
+    icon: '💻'
   }
 ]
+
+

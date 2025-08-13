@@ -29,3 +29,4 @@ const BioSection = () => {
 };
 
 export default BioSection;
+

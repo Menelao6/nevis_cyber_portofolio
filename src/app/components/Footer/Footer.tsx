@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
             <div className={styles.terminalPrompt}>
               root@home:~$ cd contact/
             </div>
-            <h3 className={styles.brandName}>Cybersecurity Terminal</h3>
+            <h3 className={styles.brandName}> Terminal</h3>
             <p className={styles.brandTagline}>
-              Breaking Barriers, Securing Systems
+              Making Everything Work by Yelling at It
             </p>
           </div>
           
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             <ul className={styles.footerLinks}>
               <li><a href="/">Home</a></li>
               <li><a href="/writeups">Write-ups</a></li>
-              <li><a href="/about">Certifications</a></li>
+              <li><a href="/about">About Me</a></li>
             </ul>
           </div>
           
@@ -32,15 +32,15 @@ const Footer: React.FC = () => {
             <ul className={styles.footerLinks}>
               <li><a href="mailto:hysenajnevis002@gmail.com">Email</a></li>
               <li><a href="https://https://www.linkedin.com/in/nevis-hysenaj/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://github.com/cybersecurity-expert" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://twitter.com/cybersec_expert" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+              <li><a href="https://ctftime.org/user/204664" target="_blank" rel="noopener noreferrer">CTFtime</a></li>
+              <li><a href="https://app.hackthebox.com/profile/256179" target="_blank" rel="noopener noreferrer">HackTheBox</a></li>
             </ul>
           </div>
         </div>
         
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            © {currentYear} Cybersecurity Terminal. All rights reserved.
+            © {currentYear} Terminal. All rights reserved.
           </div>
           <div className={styles.terminalPrompt}>
             root@home:~/contact$<span className="blinking-cursor"></span>
@@ -50,5 +50,6 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+
 
 export default Footer;

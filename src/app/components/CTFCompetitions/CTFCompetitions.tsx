@@ -2,21 +2,18 @@ import React from 'react';
 import styles from './CTFCompetitions.module.css';
 
 const ctfCompetitions = [
-  { id: 1, name: "DEF CON CTF", date: "2023", placement: "Top 50" },
-  { id: 2, name: "HackTheBox Cyber Apocalypse", date: "2023", placement: "Top 100" },
-  { id: 3, name: "PicoCTF", date: "2022", placement: "Top 5%" },
-  { id: 4, name: "Google CTF", date: "2022", placement: "Top 200" },
-  { id: 5, name: "Facebook CTF", date: "2021", placement: "Top 150" },
-  { id: 6, name: "OverTheWire", date: "2021", placement: "Completed all levels" },
+  { id: 1, name: "World Wide CTF 2025", date: "2025", placement: "9/850, team: THEM?!" },
+  { id: 2, name: "ToH CTF 2025", date: "2025", placement: "14/393, team: THEM?!" },
+  { id: 3, name: "L3akCTF 2025", date: "2025", placement: "51/1587, team: THEM?!" },
+  { id: 4, name: "NahamCon 2025", date: "2025", placement: "109/2941, Individual" },
+  { id: 5, name: "Act Now CyberDrill", date: "2025", placement: "2/30, Individual" },
+  { id: 6, name: "Cyber Wave Tirana", date: "2025", placement: "6/30, team: B2" },
 ];
 
 const CTFCompetitions = () => {
   return (
     <section className={styles.ctf}>
       <div className={styles.sectionHeader}>
-        <div className={styles.terminalPrompt}>
-          [ cat ctf_history.txt ]
-        </div>
         <h2 className={styles.sectionTitle}>CTF Competitions</h2>
         <p className={styles.sectionSubtitle}>
           Capture The Flag events I've participated in
