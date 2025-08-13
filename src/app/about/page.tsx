@@ -8,11 +8,11 @@ import styles from './aboutPage.module.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | Nevis Hysenaj',
-  description: 'Learn more about Nevis Hysenaj, a cybersecurity professional passionate about ethical hacking and CTF competitions.',
+  title: 'About me',
+  description: 'Im a dedicated CTFTime CTF player. I actively participate in a Capture The Flag (CTF) competitions, where I sharpen my skills.',
   openGraph: {
-    title: 'About | Nevis Hysenaj',
-    description: 'Discover the background, skills, and cybersecurity journey of Nevis Hysenaj, from CTF competitions to penetration testing.',
+    title: 'About me',
+    description: 'Im a dedicated CTFTime CTF player. I actively participate in a Capture The Flag (CTF) competitions, where I sharpen my skills.',
   },
 };
 
@@ -38,4 +38,5 @@ export default function AboutPage() {
       <Footer />
     </div>
   );
+
 }
