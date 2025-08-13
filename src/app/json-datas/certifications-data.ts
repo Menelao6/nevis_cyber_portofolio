@@ -27,6 +27,7 @@ export const certificates: Certificate[] = [
     issuer: 'TCM Security',
     date: 'December 2022',
     icon: '💻'
-  },
+  }
 ]
+
 
