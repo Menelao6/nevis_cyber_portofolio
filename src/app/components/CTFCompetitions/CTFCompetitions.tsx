@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './CTFCompetitions.module.css';
 
-// Sample CTF data - replace with your actual data
 const ctfCompetitions = [
   { id: 1, name: "DEF CON CTF", date: "2023", placement: "Top 50" },
   { id: 2, name: "HackTheBox Cyber Apocalypse", date: "2023", placement: "Top 100" },
