@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Providers from './Providers';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 
 export const metadata: Metadata = {
@@ -61,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           {children}
           <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
