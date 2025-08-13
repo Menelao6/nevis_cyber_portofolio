@@ -11,14 +11,8 @@ const SkillsAndTools: React.FC = () => {
       <div className="container">
         <div className={styles.sectionHeader}>
           <div className={styles.terminalPrompt}>
-            [ cat operational_capabilities/* ]
+            [ cat tools_and_technologies/* ]
           </div>
-          <h2 className={styles.sectionTitle}>
-            Operational Capabilities
-          </h2>
-          <p className={styles.sectionSubtitle}>
-            Practical skills and tools for comprehensive security operations
-          </p>
         </div>
 
         <div className={styles.toolsSection}>
