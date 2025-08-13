@@ -12,10 +12,7 @@ const FeaturedWriteups: React.FC = () => {
           <div className={styles.terminalPrompt}>
             root@home:~/featured_write-ups$ ls
           </div>
-          <h2 className={styles.sectionTitle}>Featured Security Write-ups</h2>
-          <p className={styles.sectionSubtitle}>
-            In-depth analysis of vulnerabilities and defense strategies
-          </p>
+          <h2 className={styles.sectionTitle}>Featured Write-ups</h2>
         </div>
         
         <div className={styles.cards}>
@@ -47,3 +44,4 @@ const FeaturedWriteups: React.FC = () => {
 };
 
 export default FeaturedWriteups
+
