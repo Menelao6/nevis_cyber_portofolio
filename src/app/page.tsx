@@ -7,12 +7,52 @@ import Footer from "./components/Footer/Footer"
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Nevis Hysenaj | Cybersecurity Portfolio',
-  description: 'Cybersecurity portfolio showcasing penetration testing, CTF achievements, and security research projects.',
+  title: 'Nevis Hysenaj | Cybersecurity Researcher & CTF Player',
+  description: 'Cybersecurity portfolio of Nevis Hysenaj featuring penetration testing projects, CTF writeups, vulnerability research, and ethical hacking achievements. Explore advanced security techniques and methodologies.',
+  keywords: [
+    'Nevis Hysenaj', 'cybersecurity portfolio', 'penetration testing', 
+    'CTF player', 'ethical hacking', 'vulnerability research', 
+    'security consultant', 'capture the flag', 'infosec', 
+    'cybersecurity researcher', 'security analyst', 'bug bounty hunter',
+    'penetration tester', 'security writeups'
+  ],
+  
   openGraph: {
-    title: 'Cybersecurity Portfolio | Nevis Hysenaj',
-    description: 'Explore penetration testing projects, CTF competitions, and ethical hacking research by Nevis Hysenaj.',
+    title: 'Nevis Hysenaj | Cybersecurity Researcher & CTF Player',
+    description: 'Cybersecurity portfolio featuring penetration testing projects, CTF writeups, vulnerability research, and ethical hacking achievements.',
+    url: 'https://nevis-portofolio.vercel.app',
+    images: [
+      {
+        url: '/pplogo.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Nevis Hysenaj - Cybersecurity Portfolio',
+      },
+    ],
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'CyberTerminal'
   },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nevis Hysenaj | Cybersecurity Researcher & CTF Player',
+    description: 'Cybersecurity portfolio featuring penetration testing, CTF writeups, and vulnerability research.',
+    images: ['/pplogo.webp'],
+  },
+  
+  alternates: {
+    canonical: 'https://nevis-portofolio.vercel.app',
+  },
+  
+  category: 'Technology',
+  classification: 'Cybersecurity Portfolio',
+  
+  other: {
+    'og:profile:first_name': 'Nevis',
+    'og:profile:last_name': 'Hysenaj',
+    'profile:username': 'nevis-hysenaj'
+  }
 };
 
 export default function Home() {

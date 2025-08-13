@@ -7,12 +7,44 @@ import Footer from "../components/Footer/Footer"
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'CTF Write-ups Collection',
-  description: 'Browse my comprehensive collection of CTF writeups and solutions',
+  title: 'CTF Write-ups & Security Solutions by Nevis Hysenaj',
+  description: 'Comprehensive collection of CTF writeups, penetration testing methodologies, and cybersecurity challenge solutions. Learn advanced techniques for web exploitation, cryptography, reverse engineering, and more.',
+  keywords: [
+    'CTF writeups', 'capture the flag solutions', 'penetration testing writeups',
+    'cybersecurity challenges', 'web exploitation', 'reverse engineering',
+    'cryptography challenges', 'binary exploitation', 'forensics writeups',
+    'network security', 'CTF solutions', 'ethical hacking tutorials',
+    'Nevis Hysenaj writeups'
+  ],
+  
   openGraph: {
-    title: 'CTF Write-ups Collection',
-    description: 'Browse my comprehensive collection of CTF writeups and solutions.',
+    title: 'CTF Write-ups & Security Solutions by Nevis Hysenaj',
+    description: 'Comprehensive collection of CTF writeups and cybersecurity challenge solutions covering web exploitation, cryptography, reverse engineering, and penetration testing.',
+    url: 'https://nevis-portofolio.vercel.app/writeups',
+    images: [
+      {
+        url: '/pplogo.webp', 
+        width: 1200,
+        height: 630,
+        alt: 'CTF Write-ups Collection - Security Challenge Solutions',
+      },
+    ],
+    type: 'website',
   },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CTF Write-ups & Security Solutions',
+    description: 'Comprehensive collection of CTF writeups and cybersecurity challenge solutions',
+    images: ['/pplogo.webp'],
+  },
+  
+  alternates: {
+    canonical: 'https://nevis-portofolio.vercel.app/writeups',
+  },
+  
+  category: 'Education',
+  classification: 'Cybersecurity Tutorials',
 };
 
 const fetchOptions = {

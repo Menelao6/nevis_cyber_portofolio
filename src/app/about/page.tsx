@@ -8,11 +8,38 @@ import styles from './aboutPage.module.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About me',
-  description: 'Im a dedicated CTFTime CTF player. I actively participate in a Capture The Flag (CTF) competitions, where I sharpen my skills.',
+  title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
+  description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast. Learn about my journey in Capture The Flag competitions, security research, and expertise in penetration testing and vulnerability analysis.',
+  keywords: [
+    'Nevis Hysenaj', 'CTF player', 'cybersecurity researcher', 'penetration tester',
+    'security analyst', 'ethical hacker', 'capture the flag', 'CTFTime player',
+    'vulnerability researcher', 'infosec professional'
+  ],
+  
   openGraph: {
-    title: 'About me',
-    description: 'Im a dedicated CTFTime CTF player. I actively participate in a Capture The Flag (CTF) competitions, where I sharpen my skills.',
+    title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
+    description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast specializing in security research and vulnerability analysis.',
+    url: 'https://nevis-portofolio.vercel.app/about',
+    images: [
+      {
+        url: '/pplogo.webp', 
+        width: 1200,
+        height: 630,
+        alt: 'About Nevis Hysenaj - CTF Player & Security Researcher',
+      },
+    ],
+    type: 'profile',
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
+    description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast.',
+    images: ['/pplogo.webp'],
+  },
+  
+  alternates: {
+    canonical: 'https://nevis-portofolio.vercel.app/about',
   },
 };
 

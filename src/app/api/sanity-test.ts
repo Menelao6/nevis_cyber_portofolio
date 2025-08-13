@@ -1,4 +1,3 @@
-// src/app/api/sanity-test/route.ts
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { groq } from 'next-sanity'
 import { client } from '../../sanity/lib/client'

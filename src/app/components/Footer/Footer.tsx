@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             <h4 className={styles.sectionTitle}>Connect</h4>
             <ul className={styles.footerLinks}>
               <li><a href="mailto:hysenajnevis002@gmail.com">Email</a></li>
-              <li><a href="https://https://www.linkedin.com/in/nevis-hysenaj/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://https://linkedin.com/in/nevis-hysenaj/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://ctftime.org/user/204664" target="_blank" rel="noopener noreferrer">CTFtime</a></li>
               <li><a href="https://app.hackthebox.com/profile/256179" target="_blank" rel="noopener noreferrer">HackTheBox</a></li>
             </ul>
