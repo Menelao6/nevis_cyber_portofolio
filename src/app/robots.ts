@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
     sitemap: 'https://nevis-portofolio.vercel.app/sitemap.xml',
+    host: 'https://nevis-portofolio.vercel.app',
   };
 }
