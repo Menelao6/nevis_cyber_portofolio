@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: 'https://nevis-portofolio.vercel.app',
     images: [
       {
-        url: '/ctff.svg',
+        url: '/ctff.webp',
         width: 1200,
         height: 630,
         alt: 'CyberTerminal - Security Research and CTF Write-ups',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CyberTerminal | Security Research & Write-ups',
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
-    images: ['/ctff.svg'],
+    images: ['/ctff.webp'],
   },
   
   robots: {
