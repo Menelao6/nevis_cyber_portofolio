@@ -9,20 +9,21 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
-  description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast. Learn about my journey in Capture The Flag competitions, security research, and expertise in penetration testing and vulnerability analysis.',
+  description: 'Meet Nevis Hysenaj, Tech Support Engineer and dedicated CTF player. Learn about my journey in Capture The Flag competitions, security research, and expertise in penetration testing and vulnerability analysis.',
   keywords: [
     'Nevis Hysenaj', 'CTF player', 'cybersecurity researcher', 'penetration tester',
     'security analyst', 'ethical hacker', 'capture the flag', 'CTFTime player',
-    'vulnerability researcher', 'infosec professional'
+    'vulnerability researcher', 'infosec professional', 'security enthusiast',
+    'security research', 'CTF competitions', 'ethical hacking', 'Tech Support Engineer'
   ],
   
   openGraph: {
     title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
-    description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast specializing in security research and vulnerability analysis.',
+    description: 'Meet Nevis Hysenaj, Tech Support Engineer and dedicated CTF player specializing in security research and vulnerability analysis.',
     url: 'https://nevis-portofolio.vercel.app/about',
     images: [
       {
-        url: '/pplogo.webp', 
+        url: '/ctff.svg', 
         width: 1200,
         height: 630,
         alt: 'About Nevis Hysenaj - CTF Player & Security Researcher',
@@ -34,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
-    description: 'Meet Nevis Hysenaj, a dedicated CTF player and cybersecurity enthusiast.',
-    images: ['/pplogo.webp'],
+    description: 'Meet Nevis Hysenaj, Tech Support Engineer and dedicated CTF player.',
+    images: ['/ctff.svg'],
   },
   
   alternates: {

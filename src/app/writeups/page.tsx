@@ -14,7 +14,9 @@ export const metadata: Metadata = {
     'cybersecurity challenges', 'web exploitation', 'reverse engineering',
     'cryptography challenges', 'binary exploitation', 'forensics writeups',
     'network security', 'CTF solutions', 'ethical hacking tutorials',
-    'Nevis Hysenaj writeups'
+    'Nevis Hysenaj writeups', 'security research writeups', 'vulnerability analysis',
+    'CTF player', 'security challenges', 'infosec writeups', 'bug bounty writeups',
+    'security solutions', 'CTF techniques', 'ethical hacking writeups', 'security research", "Tech Support Engineer'
   ],
   
   openGraph: {
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://nevis-portofolio.vercel.app/writeups',
     images: [
       {
-        url: '/pplogo.webp', 
+        url: '/ctff.svg', 
         width: 1200,
         height: 630,
         alt: 'CTF Write-ups Collection - Security Challenge Solutions',
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CTF Write-ups & Security Solutions',
     description: 'Comprehensive collection of CTF writeups and cybersecurity challenge solutions',
-    images: ['/pplogo.webp'],
+    images: ['/ctff.svg'],
   },
   
   alternates: {

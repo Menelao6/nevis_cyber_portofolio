@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: [
     'cybersecurity', 'security research', 'CTF writeups', 'vulnerability analysis', 
     'penetration testing', 'ethical hacking', 'security write-ups', 'CTF player',
-    'capture the flag', 'infosec', 'bug bounty', 'Nevis Hysenaj'
+    'capture the flag', 'infosec', 'bug bounty', 'Nevis Hysenaj', "Tech Support Engineer"
   ],
   authors: [{ name: 'Nevis Hysenaj', url: 'https://nevis-portofolio.vercel.app' }],
   creator: 'Nevis Hysenaj',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: 'https://nevis-portofolio.vercel.app',
     images: [
       {
-        url: '/pplogo.webp',
+        url: '/ctff.svg',
         width: 1200,
         height: 630,
         alt: 'CyberTerminal - Security Research and CTF Write-ups',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CyberTerminal | Security Research & Write-ups',
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research',
-    images: ['/pplogo.webp'],
+    images: ['/ctff.svg'],
   },
   
   robots: {
