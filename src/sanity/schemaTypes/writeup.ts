@@ -69,6 +69,13 @@ export default defineType({
       description: 'Challenge points (e.g., "100", "Medium", "Easy")'
     }),
     defineField({
+      name: "featured",
+      title: "Featured Writeups",
+      type: "boolean",
+      description: "Check this box to feature this writeup on the homepage.",
+      initialValue: false,
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',

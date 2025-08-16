@@ -56,6 +56,7 @@ export interface Writeup {
   coverImage: SanityImageSource;
   competition?: string;
   points?: number;
+  featured?: boolean;
   content: any;
   categories: Category[];
   author: Author[];

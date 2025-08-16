@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "createdAt": "2025-08-10T18:34:13.033Z",
+  "createdAt": "2025-08-16T13:23:44.492Z",
   "workspaces": [
     {
-      "name": "cybersecurity-terminal",
+      "name": "nevis-portofolio",
       "title": "Cybersecurity Terminal Studio",
       "basePath": "/studio",
       "projectId": "krdursmh",
@@ -12,7 +12,7 @@
       "mediaLibrary": {
         "enabled": false
       },
-      "schema": "a8da1a52.create-schema.json",
+      "schema": "1d80e0c5.create-schema.json",
       "tools": "7cd9a0d5.create-tools.json"
     }
   ]

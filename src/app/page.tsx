@@ -5,6 +5,8 @@ import Certifications from "./components/Certifications/Certifications"
 import SkillsAndTools from "./components/SkillsAndTools/SkillsAndTools"
 import Footer from "./components/Footer/Footer"
 import type { Metadata } from 'next';
+import { getClient } from '../sanity/lib/sanity';
+import { groq } from 'next-sanity';
 
 export const metadata: Metadata = {
   title: 'Nevis Hysenaj | Tech Support Engineer & CTF Player',
@@ -55,12 +57,31 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Home() {
+const fetchOptions = {
+  next: { revalidate: 30 }
+};
+
+export default async function Home() {
+  const client = getClient(false);
+  const writeups = await client.fetch(groq`
+    *[_type == "writeup"] | order(publishedAt desc) {
+      _id,
+      title,
+      "slug": slug.current,
+      publishedAt,
+      excerpt,
+      coverImage,
+      competition,
+      categories[]->{title},
+      author[]->{name},
+      featured
+    }
+  `, {}, fetchOptions);
   return (
     <div>
       <Header />
       <Hero />
-      <FeaturedWriteups />
+      <FeaturedWriteups writeups={writeups} />
       <Certifications />
       <SkillsAndTools />
       <Footer />

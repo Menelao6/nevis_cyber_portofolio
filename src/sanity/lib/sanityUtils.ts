@@ -24,6 +24,7 @@ export type FullWriteup = {
   };
   competition: string;
   points: number;
+  featured: boolean;
   content: any;
   categories: { title: string }[];
   author: { name: string }[];
@@ -51,6 +52,7 @@ export async function getWriteup(slug: string): Promise<Writeup | null> {
       coverImage,
       competition,
       points,
+      featured,
       content,
       categories[]->{
         _id,
