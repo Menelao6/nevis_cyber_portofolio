@@ -68,12 +68,7 @@ export default defineType({
       type: 'string',
       description: 'Challenge points (e.g., "100", "Medium", "Easy")'
     }),
-    defineField({
-      name: 'rank',
-      title: 'Rank',
-      type: 'string',
-      validation: Rule => Rule.required()
-    }),
+    
     defineField({
       name: "featured",
       title: "Featured Writeups",
