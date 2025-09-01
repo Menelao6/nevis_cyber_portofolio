@@ -72,7 +72,10 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
             <span className={styles.headerValue}>
               {writeup.author?.[0]?.name || "Anonymous"}
             </span>
+          </div>
+          <div className={styles.headerItem}>
             <span className={styles.headerLabel}>Rank</span>
+            <span className={styles.headerValue}>{writeup.rank}</span>
           </div>
         </div>
       </div>
