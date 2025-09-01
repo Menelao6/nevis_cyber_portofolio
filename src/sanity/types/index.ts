@@ -59,6 +59,7 @@ export interface Writeup {
   featured?: boolean;
   content: any;
   categories: Category[];
+  rank: string;
   author: Author[];
   relatedWriteups?: Writeup[];
 }
