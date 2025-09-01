@@ -55,7 +55,7 @@ export async function getWriteup(slug: string): Promise<Writeup | null> {
       points,
       featured,
       content,
-      rank
+      rank,
       categories[]->{
         _id,
         title,

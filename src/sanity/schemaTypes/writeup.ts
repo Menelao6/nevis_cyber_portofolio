@@ -54,6 +54,12 @@ export default defineType({
       validation: Rule => Rule.required().min(1)
     }),
     defineField({
+      name: 'rank',
+      title: 'Rank',
+      type: 'string',
+      validation: Rule => Rule.required()
+    }),
+    defineField({
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
