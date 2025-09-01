@@ -10,6 +10,7 @@ interface PageWriteup {
   slug: string;
   publishedAt: string;
   excerpt: string;
+  rank: string;
   coverImage: {
     asset: {
       _ref: string;
@@ -19,7 +20,6 @@ interface PageWriteup {
   points: number; 
   content: any;
   categories: { title: string }[];
-  rank: string;
   author: { name: string }[];
 }
 
@@ -132,7 +132,7 @@ export default async function WriteupPage({
         competition,
         points,
         content,
-        rank
+        rank,
         categories[]->{title},
         author[]->{name}
       }
