@@ -19,6 +19,7 @@ interface PageWriteup {
   points: number; 
   content: any;
   categories: { title: string }[];
+  rank: string;
   author: { name: string }[];
 }
 
@@ -37,6 +38,7 @@ export async function generateMetadata({ params }: {
       "slug": slug.current,
       publishedAt,
       excerpt,
+      rank,
       coverImage,
       categories[]->{title},
       author[]->{name}
@@ -130,6 +132,7 @@ export default async function WriteupPage({
         competition,
         points,
         content,
+        rank
         categories[]->{title},
         author[]->{name}
       }
