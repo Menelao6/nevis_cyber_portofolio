@@ -23,6 +23,7 @@ interface Writeup {
   competition: string;
   content: any;
   categories: Category[];
+  rank: string;
   author: Author[];
   points?: string;
 }
@@ -71,6 +72,7 @@ const WriteupDetail: React.FC<Props> = ({ writeup }) => {
             <span className={styles.headerValue}>
               {writeup.author?.[0]?.name || "Anonymous"}
             </span>
+            <span className={styles.headerLabel}>Rank</span>
           </div>
         </div>
       </div>
