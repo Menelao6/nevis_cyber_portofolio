@@ -55,11 +55,11 @@ export interface Writeup {
   excerpt: string;
   coverImage: SanityImageSource;
   competition?: string;
+  rank: string;
   points?: number;
   featured?: boolean;
   content: any;
   categories: Category[];
-  rank: string;
   author: Author[];
   relatedWriteups?: Writeup[];
 }
