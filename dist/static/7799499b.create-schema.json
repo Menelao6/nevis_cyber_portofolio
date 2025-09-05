@@ -211,6 +211,21 @@
         "type": "array"
       },
       {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "rank",
+        "type": "string"
+      },
+      {
         "options": {
           "hotspot": true
         },

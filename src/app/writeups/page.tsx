@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CTF Write-ups & Security Solutions by Nevis Hysenaj',
     description: 'Comprehensive collection of CTF writeups and cybersecurity challenge solutions covering web exploitation, cryptography, reverse engineering, and penetration testing.',
-    url: 'https://nevis-portofolio.vercel.app/writeups',
+    url: 'https://0wnit.vercel.app/writeups',
     images: [
       {
         url: '/ctff.webp', 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   
   alternates: {
-    canonical: 'https://nevis-portofolio.vercel.app/writeups',
+    canonical: 'https://0wnit.vercel.app/writeups',
   },
   
   category: 'Education',

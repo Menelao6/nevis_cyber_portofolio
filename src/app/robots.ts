@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://nevis-portofolio.vercel.app/sitemap.xml',
-    host: 'https://nevis-portofolio.vercel.app',
+    sitemap: 'https://0wnit.vercel.app/sitemap.xml',
+    host: 'https://0wnit.vercel.app',
   };
 }

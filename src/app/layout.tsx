@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nevis-portofolio.vercel.app'),
+  metadataBase: new URL('https://0wnit.vercel.app'),
   title: {
     template: '%s | CyberTerminal',
     default: 'CyberTerminal | Security Research & Write-ups'
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     'penetration testing', 'ethical hacking', 'security write-ups', 'CTF player',
     'capture the flag', 'infosec', 'bug bounty', 'Nevis Hysenaj', "Tech Support Engineer"
   ],
-  authors: [{ name: 'Nevis Hysenaj', url: 'https://nevis-portofolio.vercel.app' }],
+  authors: [{ name: 'Nevis Hysenaj', url: 'https://0wnit.vercel.app' }],
   creator: 'Nevis Hysenaj',
   publisher: 'Nevis Hysenaj',
   
   openGraph: {
     title: 'CyberTerminal | Security Research & Write-ups',
     description: 'Explore in-depth security write-ups, vulnerability analysis, and cybersecurity research by Nevis Hysenaj',
-    url: 'https://nevis-portofolio.vercel.app',
+    url: 'https://0wnit.vercel.app',
     images: [
       {
         url: '/ctff.webp',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   
   alternates: {
-    canonical: 'https://nevis-portofolio.vercel.app',
+    canonical: 'https://0wnit.vercel.app',
   },
   
   category: 'Technology',

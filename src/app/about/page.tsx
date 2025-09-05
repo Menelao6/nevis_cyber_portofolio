@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Nevis Hysenaj - CTF Player & Security Researcher',
     description: 'Meet Nevis Hysenaj, Tech Support Engineer and dedicated CTF player specializing in security research and vulnerability analysis.',
-    url: 'https://nevis-portofolio.vercel.app/about',
+    url: 'https://0wnit.vercel.app/about',
     images: [
       {
         url: '/ctff.webp', 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   
   alternates: {
-    canonical: 'https://nevis-portofolio.vercel.app/about',
+    canonical: 'https://0wnit.vercel.app/about',
   },
 };
 

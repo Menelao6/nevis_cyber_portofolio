@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nevis Hysenaj | Tech Support Engineer & CTF Player',
     description: 'Cybersecurity portfolio featuring penetration testing projects, CTF writeups, vulnerability research, and ethical hacking achievements.',
-    url: 'https://nevis-portofolio.vercel.app',
+    url: 'https://0wnit.vercel.app',
     images: [
       {
         url: '/ctff.webp',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   
   alternates: {
-    canonical: 'https://nevis-portofolio.vercel.app',
+    canonical: 'https://0wnit.vercel.app',
   },
   
   category: 'Technology',
