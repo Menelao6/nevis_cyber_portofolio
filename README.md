@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Cybersecurity Portfolio & CTF Blog
 
-## Getting Started
+A personal cybersecurity portfolio website built with Next.js, integrated with Sanity.io CMS, showcasing security write-ups, CTF challenges, and featured research.
+This project highlights both frontend engineering and backend content management, designed to resemble a modern hacker-style terminal theme.
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🖥️ Terminal-style UI with neon/cyber aesthetic
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📚 Write-ups page – all blogs fetched from Sanity
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🌟 Featured section – automatically populated via a "Featured" checkbox in Sanity
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🏆 CTF Integration – support for competition name, points, and author metadata
 
-## Learn More
+🖼️ Dynamic OG Images for SEO & social sharing
 
-To learn more about Next.js, take a look at the following resources:
+⚡ Responsive Design (desktop, tablet, mobile)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔒 Deployed on Vercel with Sanity Studio hosted separately
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tech Stack
 
-## Deploy on Vercel
+Framework: Next.js 14
+ (App Router)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+CMS: Sanity.io
+ (headless CMS)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Styling: TailwindCSS + CSS Modules
+
+Database: Sanity Dataset (Production)
+
+Deployment: Vercel
+
+📂 Project Structure
+├── src
+│   ├── app
+│   │   ├── writeups/         # Writeups list + detail pages
+│   │   ├── about/            # About page
+│   │   ├── components/       # Reusable UI components
+│   │   └── page.tsx          # Homepage
+│   ├── sanity/               # Sanity schemas, client, queries
+│   └── styles/               # CSS / Tailwind
+├── sanity.config.ts          # Sanity Studio config
+├── next.config.js            # Next.js config
+├── package.json
+└── README.md
+
+⚙️ Getting Started
+1. Clone the repo
+git clone https://github.com/menelao6/nevis_cyber_portofolio.git
+cd nevis_cyber_portofolio
+
+2. Install dependencies
+**npm install**
+
+4. Setup environment variables
+
+**Create a .env.local file in the root:
+
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2023-05-03
+SANITY_API_TOKEN=your_sanity_token**
+
+4. Run the development servers
+
+Next.js App
+
+**npm run dev**
+
+Sanity Studio
+
+**sanity sart**
+
+5. Open in browser
+
+Frontend → http://localhost:3000
+
+Studio → http://localhost:3333
+
+🌍 Deployment
+
+Frontend (Next.js): Hosted on Vercel
+
+CMS (Sanity Studio): Deployed via Sanity Hosting
